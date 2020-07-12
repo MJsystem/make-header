@@ -38,6 +38,18 @@ header ul li a {
 .menu-clicked {
   margin: 0;
   padding: 0;
+  background-color: black;
+  display: none;
+}
+
+.menu-clicked li {
+  color: aliceblue;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.showing {
+  display: block;
 }
 
 @media (max-width: 700px) {
