@@ -1,0 +1,57 @@
+html,
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+header {
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+header ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.sns-logo {
+  height: 100%;
+}
+
+.menu-icon-container {
+  display: none;
+}
+
+.menu-clicked {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+
+  .sns-logo {
+    display: none;
+  }
+
+  .menu-icon-container {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
