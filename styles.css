@@ -1,69 +1,121 @@
-html,
 body {
   margin: 0;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
-header {
+nav {
   display: flex;
-  background-color: black;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  background-color: #34495e;
 }
 
-header ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.nav__logo {
   display: flex;
+  padding: 8px 12px;
 }
 
-header ul li a {
-  text-decoration: none;
+.nav__logo i {
+  padding-left: 8px;
+  padding-right: 6px;
+  color: #f39c12;
+  font-size: 24px;
+}
+
+.nav__logo span {
   color: aliceblue;
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.sns-logo {
-  height: 100%;
-}
-
-.menu-icon-container {
-  display: none;
-}
-
-.menu-clicked {
-  margin: 0;
+.nav__menu {
+  display: flex;
+  list-style: none;
   padding: 0;
-  background-color: black;
+}
+
+.nav__menu li {
+  padding: 8px 12px;
+  margin: 0;
+}
+
+.nav__menu li:hover {
+  background-color: #f39c12;
+  border-radius: 10px;
+}
+
+.nav__menu li a {
+  display: inline-block;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.nav__icons {
+  display: flex;
+  margin-right: 12px;
+  padding: 0;
+}
+
+.nav__icons a {
+  color: aliceblue;
+  font-size: 16px;
+  padding: 8px 8px;
+}
+
+.nav__btn {
   display: none;
 }
 
-.menu-clicked li {
-  color: aliceblue;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.showing {
-  display: block;
-}
-
-@media (max-width: 700px) {
-  .menu {
-    display: none;
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .sns-logo {
-    display: none;
+  .nav__logo {
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8px 12px;
   }
 
-  .menu-icon-container {
-    display: inline-block;
-    margin-right: 20px;
+  .nav__menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+  }
+
+  .nav__menu li {
+    width: 100%;
+    height: 100%;
+    text-align: center;
     cursor: pointer;
+  }
+
+  .nav__menu li:hover {
+    background-color: #f39c12;
+  }
+
+  .nav__menu li a {
+    width: 100%;
+  }
+
+  .nav__icons {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav__btn {
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 20px;
+  }
+
+  .gone {
+    display: none;
   }
 }

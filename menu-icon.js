@@ -1,12 +1,14 @@
-const icon = document.querySelector(".js-icon");
-const menu = document.querySelector(".menu-clicked");
+const menu = document.querySelector(".nav__menu");
+const icons = document.querySelector(".nav__icons");
+const btn = document.querySelector(".nav__btn");
 
-function handleClick(event) {
-  menu.classList.toggle("showing");
+function handleClick() {
+  menu.classList.toggle("gone");
+  icons.classList.toggle("gone");
 }
 
 function init() {
-  icon.addEventListener("click", handleClick);
+  btn.addEventListener("click", handleClick);
 }
 
 init();
